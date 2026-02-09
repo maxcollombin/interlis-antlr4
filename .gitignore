@@ -1,2 +1,3 @@
-.antlr
-interlis-antrl4/
+grammars/.antlr
+interlis-antlr4/
+input/
