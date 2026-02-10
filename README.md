@@ -11,7 +11,7 @@ Run `. start.sh` (or `source ./start.sh`) script to create a virtual environment
 To parse an input file, use the following command:
 
 ```bash
-antlr4-parse grammars/InterlisLexer.g4 grammars/InterlisParser.g4 <rule> input/<inputfile.extension> -<option>
+antlr4-parse InterlisLexer.g4 InterlisParser.g4 <rule> input/<inputfile.extension> -<option>
 ```
 
 ### Options
@@ -24,7 +24,7 @@ antlr4-parse grammars/InterlisLexer.g4 grammars/InterlisParser.g4 <rule> input/<
 You can also parse an expression directly from the command line:
 
 ```bash
-antlr4-parse grammars/InterlisLexer.g4 grammars/InterlisParser.g4 <startRule> -tree
+antlr4-parse InterlisLexer.g4 InterlisParser.g4 <startRule> -tree
 <input_expression>
 ^D
 ```
@@ -32,7 +32,7 @@ antlr4-parse grammars/InterlisLexer.g4 grammars/InterlisParser.g4 <startRule> -t
 Generating a log with all the inconsistencies:
 
 ```bash
-antlr4-parse grammars/InterlisLexer.g4 grammars/InterlisParser.g4 <rule> input/<inputfile.extension> -diagnostics > errors.log 2>&1
+antlr4-parse InterlisLexer.g4 InterlisParser.g4 <rule> input/<inputfile.extension> -diagnostics > errors.log 2>&1
 ```
 
 ## Generating the Parser
@@ -40,7 +40,7 @@ antlr4-parse grammars/InterlisLexer.g4 grammars/InterlisParser.g4 <rule> input/<
 Generate the parser with the following command:
 
 ```bash
-antlr4 -Dlanguage=Python3 grammars/InterlisLexer.g4 grammars/InterlisParser.g4
+antlr4 -Dlanguage=Python3 InterlisLexer.g4 InterlisParser.g4
 ```
 
 ## Optional
